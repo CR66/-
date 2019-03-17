@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/dlu.css" rel="stylesheet" type="text/css"/>
+		<link href="css/pubilc.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/your.css" type="text/css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box-top">
+				<a href="#"><img src="images/2.png"/></a>
+			</div>
+			<div class="box-bottom">
+				<div class="box-bottom-top">
+					<div class="box-bottom-top-left">
+						会员登录
+					</div>
+					<div class="box-bottom-top-right">
+						还不是会员 <a href="/admin/zhuce">点击注册</a>
+					</div>
+				</div>
+				<div class="box-bottom-bottom">
+					<div class="box-bottom-bottom-left">
+						<a href="#"><img src="images/64.png"/></a>
+					</div>
+					<div class="box-bottom-bottom-right">
+						<form method="post" action="/admin/deng/submit" class="form-validate">
+							<dd>用户名：<input type="text" name="username" id="txt" required="true"/></dd>
+							<dd>密码：<input type="password" maxlength="12" minlength="6" name="password" id="txt1" value="" required="true"/></dd>
+							<dd>验证码：<input type="text" name=""  id="txt2" value="" required="true" equalTo="#txt3"/><input type="text" name="txt3" id="txt3" value="" /><a href="#" class="obtn">换一张</a></dd>
+							<dd>忘记密码</dd>
+							<dd><input type="submit" id="btn" value="登录" /></dd>
+							<dd class="get"></dd>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="margin">
+				<div class="footer-top">
+					<div class="footer-top-left">
+						<a href="#"><img src="images/63.gif"/></a>
+						<h3>1088-567-6989</h3>
+					</div>
+	                <dl>
+	                	<dt>关于我们</dt>
+	                	<dd><a href="#">平台介绍</a></dd>
+	                	<dd><a href="#">联系我们</a></dd>
+	                </dl>
+	                <dl>
+	                	<dt>购物指南</dt>
+	                	<dd><a href="#">交易条款</a></dd>
+	                	<dd><a href="#">购物须知</a></dd>
+	                	<dd><a href="#">交易条款</a></dd>
+	                	<dd><a href="#">购物须知</a></dd>
+	                </dl>
+	                <dl>
+	                	<dt>配送说明</dt>
+	            
+	                </dl>
+	                <dl>
+	                	<dt>会员介绍</dt>
+	                	<dd><a href="#">等级说明</a></dd>
+	                	<dd><a href="#">联系我们</a></dd>
+	                </dl>
+	                <dl>
+	                	<dt>售后服务</dt>
+	                	<dd><a href="#">验货与拒收</a></dd>
+	                	<dd><a href="#">退换货</a></dd>
+	                </dl>
+				</div>
+				<div class="footer-bottom">
+					<a href="#">快速查询</a> |
+					<a href="#">百度</a> |
+					<a href="#">支付宝</a>
+				</div>
+				<div class="footer-bottom-bottom">
+					<p>客户服务查询：65793298090 传真：759837979</p>
+					<p>安徽菜篮子景徽有限公司</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js">
+	</script>
+	<script type="text/javascript" src="js/jquery.validate.js">
+	</script>
+	<script type="text/javascript" src="js/jquery.validate.messages_zh.js">
+	</script>
+	<script type="text/javascript">
+		$("form").validate();
+		$("#txt3").get(0).value=getRandom();
+		function getRandom(){
+			var num1 = Math.round(Math.random() * 9)
+			var num2 = Math.round(Math.random() * 9)
+			var num3 = Math.round(Math.random() * 9)
+			var num4 = Math.round(Math.random() * 9)
+			
+			return ""+num1+num2+num3+num4
+		}
+		$("a").click(function(){
+			$("#txt3").get(0).value=getRandom();
+		})
+
+		$("input").blur(function(){
+			if($("#txt2").get(0).value == $("#txt3").get(0).value){
+				$("#btn").click(function(){
+				})
+			}
+		})
+	
+	</script>
+</html>

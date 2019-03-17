@@ -1,0 +1,23 @@
+#delect{width:100%;margin-bottom: 20px;}
+#delect dl{border:1px solid #ccc;overflow: hidden;width:100%;}
+#delect dt{height: 40px;border-bottom: 1px solid #ccc;}
+#delect dt #cc{font:20px/40px "";padding-left: 10px;margin-top: 10px;}
+#delect dt em{font: 20/40px "";padding-left: 300px;margin-top: 10px;}
+#delect dt i{font: 20/40px "";padding-left: 200px;margin-top: 10px;}
+#delect dt b{font: 20/40px "";padding-left: 150px;margin-top: 10px;}
+#delect dt u{font: 20/40px ""; padding-left: 150px;margin-top: 10px;}
+#delect dt span{font: 20/40px "";padding-left: 150px;margin-top: 10px;}
+#delect dd{height:80px;border-bottom: 1px solid #ccc;}
+#delect dd p{float: left;margin-top: 10px;width:550px;}
+#delect dd p .cc1{float: left;height: 62px;}
+#delect dd img{display:block;float: left;width:80px;height:60px;border: 1px solid #ccc;margin-left: 10px;padding-right: 5px;}
+#delect dd p em{font:15px/32px "";}
+#delect dd p b{font:15px/32px "";color: #f00;}
+#delect dd span{float: left;padding-left:0px;margin-top: 30px;}
+#delect dd form{float: left;font:15px/32px "";padding-left: 130px;margin-top: 30px;}
+#delect dd form .jian{width:17px;height:19px;float: left;}
+#delect dd form .shu{width:26px;height:21px;float: left;padding-left: 8px;}
+#delect dd form .jia{width:17px;height:19px;float:left;}
+#delect dd u{float:left;font:15px/32px "";padding-left: 120px;margin-top: 25px;}
+#delect dd a{float:left;padding-left: 150px;margin-top: 30px;} 
+#delect .delect-1 dd{height:50px;font:34px/40px "";color: #f00;text-align: center;background: #ccc;}

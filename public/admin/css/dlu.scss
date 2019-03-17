@@ -1,0 +1,27 @@
+html,body{height: 100%;background: #ccc;}
+.box{width:1002px;margin: 50px auto;overflow: hidden;border:1px solid #ccc;
+      .box-top{height:75px;border-bottom:1px solid #ccc;};
+      .box-bottom{
+            overflow: hidden;
+            .box-bottom-top{height:25px;background:url(../images/1.png);
+                            .box-bottom-top-left{float: left;font:12px/25px "";color: #ccc;};
+                            .box-bottom-top-right{float: right;font:12px/25px "";color:#666;
+                                  a{background:#F28C04;padding: 3px;border-radius: 2px;color: #fff;font:12px/25px "";}
+                            }
+            }
+            .box-bottom-bottom{height:318px;background: #fff;
+                   .box-bottom-bottom-left{width: 513px;float: left;};
+                   .box-bottom-bottom-right{width:480px;float: right;
+                          form{padding: 20px;overflow: hidden;};
+                          dd{font:16px/32px "";color:#ccc;padding-bottom: 10px;};
+                          #txt{width:287px;height:32px;};
+                          #txt1{width:287px;height:32px;margin-left: 15px;};
+                          #txt2{width:94px;height:32px;};
+                          #btn{width:298px;height:38px;background:#58A201;border:0;border-radius: 3px;color: #fff;};
+                          #txt3{width:60px;height:30px;font:22px/32px "";color: red;margin: 20px;}
+                   }
+            }
+        }
+}
+
+.get{color:#139EB5;padding-left:20px;}

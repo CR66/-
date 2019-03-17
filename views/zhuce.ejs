@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/dlus.css" rel="stylesheet" type="text/css"/>
+		<link href="css/pubilc.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/your.css" type="text/css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box-top">
+				<a href="#"><img src="images/2.png"/></a>
+			</div>
+			<div class="box-bottom">
+				<div class="box-bottom-top">
+					<div class="box-bottom-top-left">
+						新用户注册
+					</div>
+				</div>
+				<div class="box-bottom-bottom">
+					<div class="box-bottom-bottom-left">
+						<form method="post" action="/admin/zhuce/submit">
+							<dd>手机号码：<input type="text" digits=true maxlength="11" minlength="11" digits=true name="username" id="num" value="请输入手机号码" /></dd>
+							<dd><dd>验证码：<input type="text" name="txt2"  id="txt2" value="" required="true" equalTo="#txt3"/><input type="text" name="txt3" id="txt3" value="" /><a href="#" class="obtn">换一张</a></dd></dd>
+							<dd>密码：<input type="password" maxlength="12" minlength="6"  name="password" id="pas" value="" />
+							    <span id="pass1">
+							    	6~12字符(A-Z,a-z,0-9)
+							    </span>
+							</dd>
+							<dd><p>密码强度：</p>
+							   <ul class="mi">
+							    	<li>弱</li>
+							    	<li>中</li>
+							    	<li>强</li>
+							   </ul><br/>
+							</dd>
+							<dd>确认密码：<input type="password" name="" id="pas1" value="" equalTo="#pas" required="true"/></dd>
+							<dd><input type="checkbox" name="" id="che" value=""/>我已看过并同意<a href="#">《协议的免费会员》</a></dd>
+							<dd><input type="submit" id="btn" value="免费注册" /></dd>
+								<dd class="get"></dd>
+						</form>
+					</div>
+					<div class="box-bottom-bottom-right">
+						<div class="box-bottom-bottom-right-1">
+							<form>
+								<dd><p>我已经是会员，请在这里登陆！</p></dd>
+								<dd>用户名：<input type="text" name="" id="txt4" value="" /></dd>
+								<dd>密码：<input type="password" name="" id="pas2" value="" /></dd>
+								<dd><dd>验证码：<input type="text" name=""  id="txt6" value="" required="true" equalTo="#txt5"/><input type="text" name="txt5" id="txt5" value="" /><a href="#" class="obtn1">换一张</a></dd></dd>
+								<dd><input type="button" id="btn1" value="登录" /></dd>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="margin">
+				<div class="footer-top">
+					<div class="footer-top-left">
+						<a href="#"><img src="images/63.gif"/></a>
+						<h3>1088-567-6989</h3>
+					</div>
+	                <dl>
+	                	<dt>关于我们</dt>
+	                	<dd><a href="#">平台介绍</a></dd>
+	                	<dd><a href="#">联系我们</a></dd>
+	                </dl>
+	                <dl>
+	                	<dt>购物指南</dt>
+	                	<dd><a href="#">交易条款</a></dd>
+	                	<dd><a href="#">购物须知</a></dd>
+	                	<dd><a href="#">交易条款</a></dd>
+	                	<dd><a href="#">购物须知</a></dd>
+	                </dl>
+	                <dl>
+	                	<dt>配送说明</dt>
+	            
+	                </dl>
+	                <dl>
+	                	<dt>会员介绍</dt>
+	                	<dd><a href="#">等级说明</a></dd>
+	                	<dd><a href="#">联系我们</a></dd>
+	                </dl>
+	                <dl>
+	                	<dt>售后服务</dt>
+	                	<dd><a href="#">验货与拒收</a></dd>
+	                	<dd><a href="#">退换货</a></dd>
+	                </dl>
+				</div>
+				<div class="footer-bottom">
+					<a href="#">快速查询</a> |
+					<a href="#">百度</a> |
+					<a href="#">支付宝</a>
+				</div>
+				<div class="footer-bottom-bottom">
+					<p>客户服务查询：65793298090 传真：759837979</p>
+					<p>安徽菜篮子景徽有限公司</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js">
+	</script>
+	<script type="text/javascript" src="js/jquery.validate.js">
+	</script>
+	<script type="text/javascript" src="js/jquery.validate.messages_zh.js">
+	</script>
+	<script type="text/javascript">
+				$("form").validate();
+		$("#txt3").get(0).value=getRandom();
+		$("#txt5").get(0).value=getRandom();
+		function getRandom(){
+			var num1 = Math.round(Math.random() * 9)
+			var num2 = Math.round(Math.random() * 9)
+			var num3 = Math.round(Math.random() * 9)
+			var num4 = Math.round(Math.random() * 9)
+			
+			return ""+num1+num2+num3+num4
+		}
+		$(".obtn").click(function(){
+			$("#txt3").get(0).value=getRandom();
+		})
+		$(".obtn1").click(function(){
+			$("#txt5").get(0).value=getRandom();
+		})
+		$("#num").get(0).value="请输入手机号";
+		$("#num").focus(function(){
+			$(this).get(0).value="";
+		})
+		
+		var reg=/^\d{1,6}|[a-z,A-z,/]{1,6}$/;
+		var reg1=/^\w{9,12}$/;
+		$("#pas").blur(function(){
+			if(reg.test($("#pas").get(0).value)){
+				$(".mi").children("li").eq(0).css({background:"#f00"}).siblings().css({background:"#ccc"});
+			}else if(reg1.test($("#pas").get(0).value)){
+				$(".mi").children("li").eq(2).css({background:"#f00"}).siblings().css({background:"#ccc"});
+			}else if($("#pas").get(0).value == ""){
+				$(".mi").children("li").eq(1).css({background:"#ccc"});
+			}else{
+				$(".mi").children("li").eq(1).css({background:"#f00"}).siblings().css({background:"#ccc"});
+			}
+		})
+		$("input").blur(function(){
+	             if($("#txt2").get(0).value == $("#txt3").get(0).value && $("#pas1").get(0).value == $("#pas").get(0).value && $("#che").get(0).checked == true){
+	            	$("#btn").click(function(){
+	                })
+	            }
+            })
+	
+		
+	// 	class haha{
+    //     constructor(){
+    //         this.url = "http://www.liyangyf.com/ctrl/register.php";
+
+    //         this.init();
+    //     }
+    //     init(){
+    //         var that = this;
+            // $("input").blur(function(){
+	        //      if($("#txt2").get(0).value == $("#txt3").get(0).value && $("#pas1").get(0).value == $("#pas").get(0).value && $("#che").get(0).checked == true){
+	        //     	$("#btn").click(function(){
+	        //            that.load()
+	        //         })
+	        //     }
+            // })
+    //     }
+    //     load(){
+    //         $.ajax({
+    //             url:this.url,
+    //             data:{
+    //                 tel:$("#num").val(),
+    //                 pass:$("#pas1").val()
+    //             },
+    //             success:function(res){
+    //             	console.log(res);
+    //                 switch(res){
+    //                     case "0":
+    //                         $(".get").html("重名");
+    //                         break;
+    //                     case "1":
+    //                         $(".get").html("成功，3秒周跳转到登录");
+    //                         setTimeout(() => {
+    //                             location.href = "/admin/deng";
+    //                         }, 3000);
+    //                         break;
+    //                     case "2":
+    //                         $(".get").html("不允许为空");
+    //                         break;
+    //                 }
+    //             }
+    //         })
+    //     }
+    // }
+
+    // new haha();
+	</script>
+</html>

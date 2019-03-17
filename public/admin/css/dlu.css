@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  background: #ccc; }
+
+.box {
+  width: 1002px;
+  margin: 50px auto;
+  overflow: hidden;
+  border: 1px solid #ccc; }
+  .box .box-top {
+    height: 75px;
+    border-bottom: 1px solid #ccc; }
+  .box .box-bottom {
+    overflow: hidden; }
+    .box .box-bottom .box-bottom-top {
+      height: 25px;
+      background: url(../images/1.png); }
+      .box .box-bottom .box-bottom-top .box-bottom-top-left {
+        float: left;
+        font: 12px/25px "";
+        color: #ccc; }
+      .box .box-bottom .box-bottom-top .box-bottom-top-right {
+        float: right;
+        font: 12px/25px "";
+        color: #666; }
+        .box .box-bottom .box-bottom-top .box-bottom-top-right a {
+          background: #F28C04;
+          padding: 3px;
+          border-radius: 2px;
+          color: #fff;
+          font: 12px/25px ""; }
+    .box .box-bottom .box-bottom-bottom {
+      height: 318px;
+      background: #fff; }
+      .box .box-bottom .box-bottom-bottom .box-bottom-bottom-left {
+        width: 513px;
+        float: left; }
+      .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right {
+        width: 480px;
+        float: right; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right form {
+          padding: 20px;
+          overflow: hidden; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right dd {
+          font: 16px/32px "";
+          color: #ccc;
+          padding-bottom: 10px; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right #txt {
+          width: 287px;
+          height: 32px; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right #txt1 {
+          width: 287px;
+          height: 32px;
+          margin-left: 15px; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right #txt2 {
+          width: 94px;
+          height: 32px; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right #btn {
+          width: 298px;
+          height: 38px;
+          background: #58A201;
+          border: 0;
+          border-radius: 3px;
+          color: #fff; }
+        .box .box-bottom .box-bottom-bottom .box-bottom-bottom-right #txt3 {
+          width: 60px;
+          height: 30px;
+          font: 22px/32px "";
+          color: red;
+          margin: 20px; }
+
+.get {
+  color: #139EB5;
+  padding-left: 20px; }
